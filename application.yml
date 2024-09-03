@@ -5,14 +5,8 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
 
-  instance:
-    hostname: localhost
-    preferIpAddress: true
 management:
   endpoints:
     web:
       exposure:
-        include: '*'
-  endpoint:
-    shutdown:
-      enabled: true
+        include: health,info,metrics  # Expose Actuator endpoints
