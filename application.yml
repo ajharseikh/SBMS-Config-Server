@@ -9,4 +9,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics  # Expose Actuator endpoints
+        include: '*'  # Customize which endpoints are exposed
+  endpoint:
+    health:
+      show-details: always  # Control detail level of the health endpoint
