@@ -12,12 +12,20 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9090/eureka/  # Eureka Server URL with the new port
-
 management:
   endpoints:
     web:
       exposure:
-        include: '*'  # Customize which endpoints are exposed
+        include: '*'
   endpoint:
-    health:
-      show-details: always  # Control detail level of the health endpoint
+    shutdown:
+      enabled: true
+
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: '*'  # Customize which endpoints are exposed
+#   endpoint:
+#     health:
+#       show-details: always  # Control detail level of the health endpoint
